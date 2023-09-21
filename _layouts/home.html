@@ -18,7 +18,7 @@
             {% for post in posts %}
                 <article>
                     <div>{{ post.order }}</div>
-                    <a href="/{{ post.slug }}">
+                    <a href="{{ site.baseurl }}/{{ post.slug }}">
                         <h2>{{ post.title }}</h2>
                         <p>{{ post.description }}</p>
                     </a>
