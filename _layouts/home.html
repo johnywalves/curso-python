@@ -1,0 +1,31 @@
+{% include head.html %}
+
+{% assign modulos = site.posts | group_by: "modulo" | sort: "name" %}
+
+<body>
+    {% include header.html %}
+
+    <div class="presentation">
+        {{ content }}
+    </div>
+
+    <section>
+        {% for modulo in modulos %}
+            <h3 class="modulo">{{ modulo.name }}</h3>
+
+            {% assign posts = modulo.items | sort: "order" %}
+
+            {% for post in posts %}
+                <article>
+                    <div>{{ post.order }}</div>
+                    <a href="/{{ post.slug }}">
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.description }}</p>
+                    </a>
+                </article>
+            {% endfor %}
+        {% endfor %}
+    </section>
+
+    {% include footer.html %}
+</body>
