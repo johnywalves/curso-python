@@ -2,6 +2,115 @@
 layout: post
 modulo: 2. Automação de Tarefas com Python
 title: Manipulação de Arquivos e Diretórios
-description: Em breve
+description: Interagir com o sistema operacional objetivando manipulação de arquivos e diretórios para eventos como ler, criar, mover e excluir
 order: 2.1
 ---
+
+## Listagem de arquivos em pasta
+
+Ler a listagem dos arquivos disponíveis de uma determinado local, indicado `.` capturamos os arquivos disponíveis no local da execução
+
+```python
+import os
+
+lista_arquivos = os.listdir(".")
+
+for arquivo in lista_arquivos:
+    print(arquivo)
+```
+
+## Ler arquivo completo
+
+Para esse vamos ler a Canção do Exílio encontrado na área de [Downloads](/downloads). Uma boa prática executar a função `close` para liberar o arquivo, informando o caminho do arquivo e a função no caso "r" (_read_) para leitura
+
+```python
+arquivo = open("./cancao_do_exilio.txt", "r")
+
+print(arquivo.read())
+
+arquivo.close()
+```
+
+## Ler arquivo linha por linha
+
+Novamente lendo a Canção do Exílio, agora imprimindo linha por linha
+
+```python
+arquivo = open("./cancao_do_exilio.txt", "r")
+
+linhas = arquivo.readlines()
+for linha in linhas:
+    print(linha)
+
+arquivo.close()    
+```
+
+## Escrever arquivo completo
+
+Podemos criar um arquivo completo, abrindo um arquivo não existente para criá-lo ou sobrescrever um arquivo existente, informando o modo de escrita com "w" (_write_)
+
+```python
+arquivo = open("facilitada.txt", "w")
+
+arquivo.write("lá?\nah!\nsabiá…\npapá…\nmaná…\nsofá…\nsinhá…\ncá?\nbah!")
+
+arquivo.close()
+```
+
+O modo "x" para garantir que a criação de um arquivo, se o arquivo existir vai retornar um erro
+
+## Escrever arquivo linha por linha
+
+Podemos criar um arquivo adicionado para linha ao iterar o conjunto
+
+```python
+arquivo = open("facilitada.txt", "w")
+
+linhas = ["lá?\n", "ah!\n", "sabiá…\n", "papá…\n", "maná…\n", "sofá…\n", "sinhá…\n", "cá?\n", "bah!\n"]
+
+arquivo.writelines(linhas)
+
+arquivo.close()
+```
+
+## Adicionar conteúdo para um arquivo existente
+
+Incluir conteúdo no final de um arquivo já existente ou criar caso não exista
+
+```python
+arquivo = open("facilitada.txt", "a")
+
+arquivo.write('\nJosé Paulo Paes')
+
+arquivo.close()
+```
+
+## Renomear arquivos
+
+aavsfvfdsv
+
+```python
+import os
+
+os.rename("./facilitada.txt", "./simplificada.txt")
+```
+
+## Mover arquivo
+
+aavsfvfdsv
+
+```python
+import os
+
+os.replace("./simplificada.txt", "./facilitada.txt")
+```
+
+## Remover arquivo
+
+csfvadsbxgb
+
+```python
+import os
+
+os.remove("facilitada.txt")
+```

@@ -9,6 +9,9 @@
         "spyder",
         "venv",
         "jekyll",
-        "elif"
+        "elif",
+        "randint",
+        "listdir",
+        "readlines"
     ]
 }

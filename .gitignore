@@ -1,6 +1,10 @@
+# Arquivos do Jekyll
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# Arquivos criados pelo processo
 teste.py
+facilitada.txt

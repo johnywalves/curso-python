@@ -38,35 +38,43 @@ else:
 
 ## Iterações
 
-vbadbgadbgadbg
+Repetição de um determinado comportamento por uma condição ou elementos de um conjunto
 
-### For
+### For: para
 
-vbadbgadbgadbg
+O `for` itera os elementos de um conjunto, que pode ser gerada pela função de `range` algo informar a quantidade de vezes desejada
 
 ```python
 for x in range(6):
   print(x)
 ```
 
-vbadbgadbgadbg
+A lista pode ter outra origem como uma lista de documentos, textos, números...
 
 ```python
-a = [1, 3, 5, 7]
+a = [1, 3, 5, 7, 9, 11]
 
 for item in a:
     print(item)
 ```
 
-### While
+### While: enquanto
 
-vsafvasfvav
+Enquanto uma condição for atendida o `while` garante a repetição do trecho indentado
 
 ```python
 i = 0
 
-while (i != 8):
-    print("Item: " + str(i))
+while i != 8:
+    print("número: " + str(i))
+    i = i + 1
+```
+
+Um laço (_loop_) infinito pode ser gerado pela condição sempre verdadeira
+
+```python
+while True:
+    print("número: " + str(i))
     i = i + 1
 ```
 
