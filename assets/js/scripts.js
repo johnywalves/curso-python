@@ -4,7 +4,7 @@ window.__setPreferredTheme = function (newTheme) {
   document.body.className = newTheme;
 
   const primsTheme = newTheme === "dark" ? "-tomorrow" : "";
-  const primsFile = `/curso-python/assets/css/prism${primsTheme}.css`;
+  const primsFile = `/assets/css/prism${primsTheme}.css`;
   document.getElementById("prismsheet").href = primsFile;
 
   window && localStorage && localStorage.setItem("theme", newTheme);

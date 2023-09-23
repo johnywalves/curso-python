@@ -18,15 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Curso Python
+title: Use Python
 email: contato@johnywalves.com.br
 description: >- # this means to ignore newlines until "baseurl:"
   Curso introdutório para Python para configuração de ambiente de desenvolvimento local, 
   automação de processos, manipulação, análise e visualização de dados
-baseurl: /curso-python # the subpath of your site, e.g. /blog
+baseurl:  # the subpath of your site, e.g. /blog
 
-url: "https://johnywalves.github.io/curso-python/" # the base hostname & protocol for your site, e.g. http://example.com
-thumbnail: "https://johnywalves.github.io/curso-python/assets/img/thumbnail.png"
+url: "https://usepython.com.br" # the base hostname & protocol for your site, e.g. http://example.com
+thumbnail: "https://usepython.com.br/assets/img/thumbnail.png"
 permalink: ":slug"
 github_username: johnywalves
 

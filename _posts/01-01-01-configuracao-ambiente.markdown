@@ -6,7 +6,7 @@ description: Configurar um ambiente Python, verificar a instalação e familiari
 order: 1.1
 ---
 
-Configurar o ambiente Python é o primeiro passo para brincar com Python. Aqui estão as etapas básicas para configurar o ambiente Python
+Vamos brincar com Python! Primeiro vamos para as as etapas básicas para configurar e experimentar o ambiente Python
 
 ## Instalação do Python
 
