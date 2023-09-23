@@ -12,7 +12,7 @@ Instalar
 bundle install
 ```
 
-Disponibilizar o serviço para cesso
+Disponibilizar o serviço para acesso no endereço [http://127.0.0.1:4000/curso-python/](http://127.0.0.1:4000/curso-python/)
 
 ```bash
 bundle exec jekyll serve
