@@ -20,9 +20,7 @@
 
 title: Use Python
 email: contato@johnywalves.com.br
-description: >- # this means to ignore newlines until "baseurl:"
-  Curso introdutório para Python para configuração de ambiente de desenvolvimento local, 
-  automação de processos, manipulação, análise e visualização de dados
+description: Curso introdutório em Python abordando a configuração do ambiente de desenvolvimento, automação de processos, manipulação, análise e visualização de dados
 baseurl:  # the subpath of your site, e.g. /blog
 
 url: "https://usepython.com.br" # the base hostname & protocol for your site, e.g. http://example.com

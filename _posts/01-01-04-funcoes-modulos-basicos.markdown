@@ -2,7 +2,7 @@
 layout: post
 modulo: 1. Introdução ao Python
 title: Funções e Módulos Básicos
-description: Erat sanctus elit sed gubergren kasd lorem ipsum magna. Accusam wisi magna duo ea. Invidunt clita volutpat at laoreet nonumy eos stet assum erat.
+description: Funções e módulos essenciais em Python são essenciais para realizar uma variedade de tarefas. Vamos destacar algumas das funções e módulos mais simples e úteis nesta linguagem
 order: 1.4
 ---
 

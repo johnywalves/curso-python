@@ -2,18 +2,38 @@
 layout: post
 modulo: 1. Introdução ao Python
 title: Estruturas de Controle (condicionais e loops)
-description: Aliquyam sit clita rebum liber tempor justo kasd magna amet rebum dolore dolore dolore luptatum. Et illum duo sea duo facer invidunt diam. No erat duo feugait et lorem justo in
+description: As estruturas condicionais permitem que um programa execute comandos distintos com base em condições específicas, enquanto os loops garantem a repetição de um determinado comportamento um número de vezes estabelecido por uma condição
 order: 1.3
 ---
 
 ## Condicionais
 
-vsfavsfvv
+Controlar a execução de alguns trechos de código baseado por condições específicas. No exemplo a seguir, o valor não é exibido
 
 ```python
-if
-elif
-else
+a = 5
+if a == 7:
+    print(a)
+```
+
+O evento é executado quando a condição é cumprida
+
+```python
+a = 5
+if a == 7:
+    print(a)
+```
+
+Podemos fazer uma sequência de validações
+
+```python
+a = 5
+if a == 7:
+    print('primeiro')
+elif a == 5:
+    print('segundo')
+else:
+    print('terceiro')
 ```
 
 ## Iterações

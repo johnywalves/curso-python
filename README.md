@@ -1,6 +1,6 @@
 # Use Python
 
-Curso introdutório para Python para configuração de ambiente de desenvolvimento local, automação de processos, manipulação, análise e visualização de dados
+Curso introdutório em Python abordando a configuração do ambiente de desenvolvimento, automação de processos, manipulação, análise e visualização de dados
 
 ## Configuração de ambiente
 
@@ -10,7 +10,7 @@ Baixe a versão mais recente do Ruby para o seu sistema operacional a partir do 
 gem install jekyll bundler
 ```
 
-Insltar os pacotes definidos pelo `Gemfile` do projeto
+Instalar os pacotes definidos pelo `Gemfile` do projeto
 
 ```bash
 bundle install

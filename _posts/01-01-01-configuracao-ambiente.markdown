@@ -6,8 +6,6 @@ description: Configurar um ambiente Python, verificar a instalação e familiari
 order: 1.1
 ---
 
-Vamos brincar com Python! Primeiro vamos para as as etapas básicas para configurar e experimentar o ambiente Python
-
 ## Instalação do Python
 
 Baixe a versão mais recente do Python para o seu sistema operacional a partir do site oficial [https://www.python.org/downloads/](https://www.python.org/downloads/). Siga as instruções de instalação específicas para o seu sistema
@@ -40,7 +38,7 @@ pip install pandas matplotlib numpy seaborn
 
 ## Executar módulos em Python
 
-Podemos executar um módulos somente uma linha com seguinte comando `python3 -m` e acompamando do módulo no terminal como no seguinte exemplo:
+Podemos executar um módulos somente uma linha com seguinte comando `python3 -m` e acompanhando do módulo no terminal como no seguinte exemplo:
 
 ```bash
 python -m this
@@ -124,7 +122,7 @@ exit()
 
 ## Executar um arquivo Python
 
-Para executar o arquivo podemos simplemente informar o caminho para o arquivo ou somente o nome do arquivos caso seja o caminho local no terminal
+Para executar o arquivo podemos simplesmente informar o caminho para o arquivo ou somente o nome do arquivos caso seja o caminho local no terminal
 
 ```bash
 python {caminho/do/arquivo}
@@ -148,7 +146,11 @@ python3 poem.py
 
 ## IDE (Ambiente de Desenvolvimento Integrado)
 
-Existem várias IDEs para desenvolvimento em Python como [Jupyter Notebook](https://jupyter.org/), [PyCharm](https://www.jetbrains.com/pycharm/) ou [Spyder](https://www.spyder-ide.org/), alguns ambientes online como o [Google Colab](https://colab.google/), recomendo o [Visual Studio Code](https://code.visualstudio.com/) para executar o ambiente devesenvolvimento localmente facilitado pelo plugin [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+Existem várias IDEs para desenvolvimento em Python como [Jupyter Notebook](https://jupyter.org/), [PyCharm](https://www.jetbrains.com/pycharm/) ou [Spyder](https://www.spyder-ide.org/), alguns ambientes online como o [Google Colab](https://colab.google/)
+
+Recomendo o [Visual Studio Code](https://code.visualstudio.com/) (VSCode) para executar o ambiente desenvolvimento localmente facilitado pelo plugin [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), desta maneira ao abrir um arquivo Python no VSCode temos o botão de executar e o resultado já apresentado no terminal
+
+![VSCode com botão de executar](/assets/figs/vscode.jpg)
 
 ## Ambiente Virtual (Opcional, mas Recomendado)
 

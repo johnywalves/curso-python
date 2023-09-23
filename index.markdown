@@ -6,4 +6,4 @@ title: Roadmap
 layout: home
 ---
 
-Curso introdutório para **Python** para configuração de ambiente de desenvolvimento local, automação de processos, manipulação, análise e visualização de dados
+Curso introdutório em **Python** abordando a configuração do ambiente de desenvolvimento, automação de processos, manipulação, análise e visualização de dados

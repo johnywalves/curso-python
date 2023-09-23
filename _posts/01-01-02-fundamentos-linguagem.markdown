@@ -107,7 +107,7 @@ print(type(True))
 print(type(soma))
 ```
 
-Converter os valores, quando fizer sentido simplmente apontando o tipo desejado
+Converter os valores, quando fizer sentido simplesmente apontando o tipo desejado
 
 ```python
 print(type(int(1.0)))
@@ -169,7 +169,7 @@ print(a[2])
 print(a[-1])
 ```
 
-Uma lista é um conjunto mutável podemos adicioanr elementos
+Uma lista é um conjunto mutável podemos adicionar elementos
 
 ```python
 a = [1, 3, 5, 7]
@@ -219,29 +219,29 @@ a[1] = 9
 Podemos criar um objeto com os atributos nomeados
 
 ```python
-usuario = { 'nome': 'João da Silva', 'email': 'joao@silva.com'  }
+user = { 'nome': 'João da Silva', 'email': 'joao@silva.com'  }
 
-print(type(usuario))
-print(usuario)
+print(type(user))
+print(user)
 ```
 
 Para acessar os valores do dicionário de forma individual
 
 ```python
-usuario = { 'nome': 'João da Silva', 'email': 'joao@silva.com'  }
+user = { 'nome': 'João da Silva', 'email': 'joao@silva.com'  }
 
-print('nome', usuario['nome'])
-print('email', usuario['email'])
+print('nome', user['nome'])
+print('email', user['email'])
 ```
 
 Para adicionar um novo atributo para o dicionário
 
 ```python
-usuario = { 'nome': 'João da Silva', 'email': 'joao@silva.com'  }
+user = { 'nome': 'João da Silva', 'email': 'joao@silva.com'  }
 
-usuario['idade'] = 37
+user['idade'] = 37
 
-print('nome', usuario['nome'])
-print('email', usuario['email'])
-print('idade', usuario['idade'])
+print('nome', user['nome'])
+print('email', user['email'])
+print('idade', user['idade'])
 ```
