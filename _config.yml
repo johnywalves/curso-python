@@ -24,9 +24,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   Curso introdutório para Python para configuração de ambiente de desenvolvimento local, 
   automação de processos, manipulação, análise e visualização de dados
 baseurl: /curso-python # the subpath of your site, e.g. /blog
-permalink: ":slug"
+
 url: "https://johnywalves.github.io/curso-python/" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  johnywalves
+thumbnail: "https://johnywalves.github.io/curso-python/assets/img/thumbnail.png"
+permalink: ":slug"
+github_username: johnywalves
 
 # Exclude from processing.
 # The following items will not be processed, by default.
