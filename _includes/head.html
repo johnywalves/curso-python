@@ -3,6 +3,7 @@
 
 {% assign page_title = page.title | append: " | " | append: site.title %}
 {% assign page_description = site.description %}
+{% assign page_icon = site.url | append: "/assets/img/icon-192.png" %}
 
 <head>
     <meta charset="UTF-8" />
@@ -19,9 +20,9 @@
     
     <meta name="type" property="og:type" content="website" />
     <meta name="url" property="og:url" content="{{ site.url | escape }}" />
-    <meta name="site_name" property="og:site_name" content="{{ page_title | escape }}" />
+    <meta name="site_name" property="og:site_name" content="{{ site.title | escape }}" />
     <meta name="locale" property="og:locale" content="pt_BR" />
-
+    
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="{{ site.url | escape }}" />
     <meta name="twitter:title" content="{{ page_title | escape }}" />
@@ -30,4 +31,7 @@
 
     <link id="prismsheet" rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css" />
+
+    <link rel="icon" href="{{ page_icon | escape }}" type="image/png" />
+    <link rel="manifest" href="manifest.json" />
 </head>

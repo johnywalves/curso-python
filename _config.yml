@@ -26,7 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl:  # the subpath of your site, e.g. /blog
 
 url: "https://usepython.com.br" # the base hostname & protocol for your site, e.g. http://example.com
-thumbnail: "https://usepython.com.br/assets/img/thumbnail.png"
+thumbnail: "https://usepython.com.br/assets/img/thumbnail.jpg"
 permalink: ":slug"
 github_username: johnywalves
 
