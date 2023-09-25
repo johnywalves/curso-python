@@ -12,6 +12,12 @@
         "elif",
         "randint",
         "listdir",
-        "readlines"
+        "readlines",
+        "writelines",
+        "xlabel",
+        "ylabel",
+        "savefig",
+        "fontsize",
+        "pyplot"
     ]
 }

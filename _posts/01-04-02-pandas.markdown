@@ -2,6 +2,190 @@
 layout: post
 modulo: 4. Análise de Dados com Python
 title: Biblioteca de Análise de Dados (pandas)
-description: Em breve
+description: A biblioteca Pandas é uma das bibliotecas mais populares em Python para manipulação e análise de dados. Ela fornece estruturas de dados flexíveis e eficientes para trabalhar com dados tabulares, como planilhas, tabelas de banco de dados e conjuntos de dados em geral
 order: 4.2
 ---
+
+## Importação de biblioteca
+
+Importação de uma biblioteca com um apelido
+
+```python
+import pandas as pd
+```
+
+## Criação dos DataFrames
+
+Pandas introduz duas principais estruturas de dados: o **DataFrame** e a **Series**. O DataFrame é uma tabela bidimensional com rótulos nas colunas e linhas, semelhante a uma planilha, enquanto a Series é uma estrutura unidimensional semelhante a uma coluna ou linha de um DataFrame
+
+
+Criação de um DataFrame com a classificação de frutas
+
+```python
+import pandas as pd
+
+frutas = pd.DataFrame([
+    {"Nome": "Banana", "Cor": "Amarela", "CascaComestivel": False, "Nota": 9 },
+    {"Nome": "Maçã", "Cor": "Vermelha", "CascaComestivel": True, "Nota": 4 },
+    {"Nome": "Goiaba", "Cor": "Verde", "CascaComestivel": True, "Nota": 6 }
+], index=['3', '1', '2'])
+
+print(frutas)
+```
+
+Adicionar coluna para todos os valores
+
+```python
+import pandas as pd
+
+frutas = pd.DataFrame([
+    {"Nome": "Banana", "Cor": "Amarela", "CascaComestivel": False, "Nota": 9 },
+    {"Nome": "Maçã", "Cor": "Vermelha", "CascaComestivel": True, "Nota": 4 },
+    {"Nome": "Goiaba", "Cor": "Verde", "CascaComestivel": True, "Nota": 6 }
+], index=['3', '1', '2'])
+
+frutas["Comestível"] = True
+
+print(frutas)
+```
+
+Criação de um novo DataFrames com o campo comestível incluso
+
+```python
+frutas = pd.DataFrame([
+    {"Nome": "Maracujá", "Cor": "Amarela", "CascaComestivel": False, "Nota": 9, "Comestível": True },
+    {"Nome": "Pera", "Cor": "Verde", "CascaComestivel": True, "Nota": 4, "Comestível": True }
+])
+
+print(frutas)
+```
+
+União dos DataFrames
+
+```python
+import pandas as pd
+
+frutas_1 = pd.DataFrame([
+    {"Nome": "Banana", "Cor": "Amarela", "CascaComestivel": False, "Nota": 9 },
+    {"Nome": "Maçã", "Cor": "Vermelha", "CascaComestivel": True, "Nota": 4 },
+    {"Nome": "Goiaba", "Cor": "Verde", "CascaComestivel": True, "Nota": 6 }
+], index=['3', '1', '2'])
+
+frutas_1["Comestível"] = True
+
+frutas_2 = pd.DataFrame([
+    {"Nome": "Maracujá", "Cor": "Amarela", "CascaComestivel": False, "Nota": 9, "Comestível": True },
+    {"Nome": "Pera", "Cor": "Verde", "CascaComestivel": True, "Nota": 4, "Comestível": True }
+])
+
+frutas = pd.merge(frutas_1, frutas_2, how="outer")
+
+print(frutas)
+```
+
+Lorem
+
+Type of merge to be performed.
+
+- left: use only keys from left frame, similar to a SQL left outer join; preserve key order.
+- right: use only keys from right frame, similar to a SQL right outer join; preserve key order.
+- outer: use union of keys from both frames, similar to a SQL full outer join; sort keys lexicographically.
+- inner: use intersection of keys from both frames, similar to a SQL inner join; preserve the order of the left keys.
+- cross: creates the cartesian product from both frames, preserves the order of the left keys.
+
+Criação de array com Fruta e Origem
+
+```python
+import pandas as pd
+
+frutas_origem = pd.DataFrame([
+    {"Nome": "Banana", "Origem": "Indonésia" },
+    {"Nome": "Maçã", "Origem": "Ásia Central" },
+    {"Nome": "Goiaba", "Origem": "Brasil" },
+    {"Nome": "Maracujá", "Origem": "Brasil" },
+    {"Nome": "Pera", "Origem": "Norte da África" }
+])
+
+print(frutas_origem)
+```
+
+União lateral de DataFrame
+
+```python
+import pandas as pd
+
+frutas_1 = pd.DataFrame([
+    {"Nome": "Banana", "Cor": "Amarela", "CascaComestivel": False, "Nota": 9 },
+    {"Nome": "Maçã", "Cor": "Vermelha", "CascaComestivel": True, "Nota": 4 },
+    {"Nome": "Goiaba", "Cor": "Verde", "CascaComestivel": True, "Nota": 6 }
+], index=['3', '1', '2'])
+
+frutas_1["Comestível"] = True
+
+frutas_2 = pd.DataFrame([
+    {"Nome": "Maracujá", "Cor": "Amarela", "CascaComestivel": False, "Nota": 9, "Comestível": True },
+    {"Nome": "Pera", "Cor": "Verde", "CascaComestivel": True, "Nota": 4, "Comestível": True }
+])
+
+frutas = pd.merge(frutas_1, frutas_2, how="outer")
+
+frutas_origem = pd.DataFrame([
+    {"Nome": "Banana", "Origem": "Indonésia" },
+    {"Nome": "Maçã", "Origem": "Ásia Central" },
+    {"Nome": "Goiaba", "Origem": "Brasil" },
+    {"Nome": "Maracujá", "Origem": "Brasil" },
+    {"Nome": "Pera", "Origem": "Norte da África" }
+])
+
+frutas_completo = pd.merge(frutas, frutas_origem, how="left", left_on="Nome", right_on="Nome")
+
+print(frutas_completo)
+```
+
+## Manipulação de DataFrames
+
+Vamos criar a listagem para realizar a manipulação
+
+```python
+import pandas as pd
+
+frutas = pd.DataFrame([
+    {
+        "Nome": "Banana",
+        "Cor": "Amarela",
+        "CascaComestivel": False,
+        "Nota": 9,
+        "Origem": "Indonésia"
+    },
+    {
+        "Nome": "Maçã",
+        "Cor": "Vermelha",
+        "CascaComestivel": True,
+        "Nota": 7,
+        "Origem": "Ásia Central"
+    },
+    {
+        "Nome": "Goiaba",
+        "Cor": "Verde",
+        "CascaComestivel": True,
+        "Nota": 6,
+        "Origem": "Brasil"
+    },
+    {
+        "Nome": "Maracujá",
+        "Cor": "Amarela",
+        "CascaComestivel": True,
+        "Nota": 9,
+        "Origem": "Brasil"
+    },
+    {
+        "Nome": "Pera",
+        "Cor": "Verde",
+        "CascaComestivel": True,
+        "Nota": 4,
+        "Origem": "Norte da África"
+    }
+])
+
+print(frutas)
+```

@@ -2,72 +2,9 @@
 layout: post
 modulo: 4. Análise de Dados com Python
 title: Biblioteca para Conjunto de Dados (numpy)
-description: Em breve
+description: A biblioteca NumPy (Numerical Python) é uma biblioteca fundamental para computação científica em Python. Ela fornece suporte para a manipulação eficiente de arrays multidimensionais e funções matemáticas de alto desempenho para realizar operações em dados numéricos
 order: 4.1
 ---
-
-## Manipulação de conjunto de dados
-
-Ler dados de arrays
-
-```python
-primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
-
-print(primos) # Tudo
-print(primos[0]) # Primeiro
-print(primos[3]) # Quarto
-print(primos[7]) # Oitavo - Último
-print(primos[0:2]) # Primeiro, Segundo, Terceiro
-print(primos[1:4]) # Segundo, Terceiro, Quarto, Quinto
-print(primos[-1]) # Último
-print(primos[-2]) # Penúltimo
-```
-
-Alteração de dados de array e matrizes
-
-```python
-primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
-primos[3] = 9
-print(primos)
-```
-
-Visualizar dados da array por condição, exemplos para os todos maiores de 3
-
-```python
-primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
-print(primos[primos > 3])
-```
-
-Visualizar Terceira linha e Terceira coluna
-
-```python
-primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
-print(primos[2, 2])
-```
-
-Quarta linha
-
-```python
-primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
-print(primos[3, ])
-```
-
-Quarta linha e Quarta a sétima coluna
-
-```python
-primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
-print(primos[3, 3:6])
-```
-
-Alterar matriz em lote
-
-```python
-primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
-
-primos[primos >= 20] = 90
-
-print(primos)
-```
 
 ## Importação de biblioteca
 
@@ -116,7 +53,52 @@ array_lista = np.array(lista)
 print("max", array_lista.max())
 ```
 
-## Criação de um Array multi dimensional
+## Manipulação de conjunto de dados
+
+Ler dados de arrays
+
+```python
+import numpy as np
+
+primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37])
+
+print('Tudo', primos)
+print('Primeiro', primos[0])
+print('Quarto', primos[3])
+print('Oitavo', primos[7])
+print('Primeiro, Segundo, Terceiro', primos[0:2])
+print('Segundo, Terceiro, Quarto, Quinto', primos[1:4])
+print('Último', primos[-1])
+print('Penúltimo', primos[-2])
+```
+
+Alteração de dados de array e matrizes
+
+```python
+import numpy as np
+
+primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37])
+
+primos[3] = 9
+
+print(primos)
+```
+
+Visualizar dados da array por condição, exemplos para os todos maiores de 3
+
+```python
+import numpy as np
+
+primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37])
+
+filtro = primos > 3
+maiores_tres = primos[filtro]
+
+print('filtro', filtro)
+print('maiores_tres', maiores_tres)
+```
+
+## Criação de array multi-dimensional
 
 Criação de matriz
 
@@ -124,6 +106,7 @@ Criação de matriz
 import numpy as np
 
 array_multi = np.array([[1, 3, 5, 7], [2, 4, 6, 8]])
+
 print(array_multi)
 print(array_multi.shape)
 ```
@@ -133,7 +116,10 @@ Remodelar uma matriz
 ```python
 import numpy as np
 
+array_multi = np.array([[1, 3, 5, 7], [2, 4, 6, 8]])
 reshape = array_multi.reshape(4, 2)
+
+print(array_multi)
 print(reshape)
 ```
 
@@ -149,11 +135,146 @@ array_create.resize((6, 6))
 print(array_create)
 ```
 
+## Matemática com arrays
+
+Conta com arrays
+
 ```python
 import numpy as np
 
-lista = [6, 7, 8, 9, 10, 2]
-array_lista = np.resize((3, 2))
+a = np.array([2, 3, 5, 7, 9, 11])
+b = np.array([13, 17, 19, 23, 29, 31])
 
-print("max", array_lista.max(axis=1))
+print('soma', a + b)
+print('subtração', b - a)
+print('soma elementos', a.sum())
+print('media elementos', a.mean())
 ```
+
+Elementos únicos
+
+```python
+import numpy as np
+
+lista = np.array([1, 1, 2, 5, 5, 7, 9, 11])
+
+print('únicos', np.unique(lista))
+```
+
+Filtragem completa
+
+```python
+import numpy as np
+
+primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37])
+
+print('maiores 5', np.where(primos > 7))
+print('menores 30', np.where(primos < 30))
+print('entre 5 e 30', primos[np.logical_and(primos > 7, primos < 30))
+```
+
+Remover zeros
+
+```python
+import numpy as np
+
+lista = np.array([2, 3, 5, 7, 9, 0, 13, 0, 19, 0])
+
+print(lista[lista.nonzero()])
+```
+
+## Matemática com array multi-dimensional
+
+Cálculos simples com matrizes
+
+```python
+import numpy as np
+
+lista = np.array([19, 2, 3, 17, 5, 7, 9, 11, 13])
+lista.resize((3, 3))
+
+print(lista)
+
+print("max em colunas", lista.max(axis=0))
+print("max em linhas", lista.max(axis=1))
+
+print("média em colunas", lista.mean(axis=0))
+print("média em linhas", lista.mean(axis=1))
+
+print("min em colunas", lista.min(axis=0))
+print("min em linhas", lista.min(axis=1))
+
+print("soma em colunas", lista.sum(axis=0))
+print("soma em linhas", lista.sum(axis=1))
+```
+
+## Manipulação com array multi-dimensional
+
+Visualizar **terceira** linha e **terceira** coluna
+
+```python
+import numpy as np
+
+primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31])
+primos.resize((4, 3))
+
+print('matriz', primos)
+print('elemento', primos[2, 2])
+```
+
+**quarta** linha
+
+```python
+import numpy as np
+
+primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31])
+primos.resize((4, 3))
+
+print('matriz', primos)
+print('linha', primos[3, ])
+```
+
+**quarta** linha e **segunda** a **terceira** coluna
+
+```python
+import numpy as np
+
+primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31])
+primos.resize((4, 3))
+
+print('matriz', primos)
+print('elemento', primos[3, 1:2])
+```
+
+Alterar matriz em lote
+
+```python
+import numpy as np
+
+primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31])
+primos.resize((4, 3))
+
+primos[primos >= 20] = 90
+
+print(primos)
+```
+
+## Conversão de tipos
+
+Conversão da listagem inteira para um tipo
+
+```python
+import numpy as np
+
+primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37])
+primos_float = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37], float)
+primos_str = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37], str)
+
+print('int', primos)
+print('float', primos_float)
+print('str', primos_str)
+```
+
+## Quero mais
+
+O NumPy é uma biblioteca essencial para qualquer pessoa que trabalhe com computação científica, análise de dados ou processamento de números em Python, para saber mais você pode consultar a [documentação do NumPy](https://numpy.org/doc/stable/reference/index.html#reference)

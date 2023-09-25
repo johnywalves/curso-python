@@ -107,7 +107,7 @@ os.rename("./facilitada.txt", "./simplificada.txt")
 
 ## Mover arquivo
 
-aavsfvfdsv
+Realocar um arquivo ou renomear ele se movido para o mesmo lugar com outro nome
 
 ```python
 import os
@@ -127,7 +127,7 @@ os.remove("facilitada.txt")
 
 ## Criar diretórios
 
-vafvabgd
+Basta informar o caminho desejado para 
 
 ```python
 import os
@@ -137,7 +137,7 @@ os.mkdir("./teste")
 
 ## Executar comandos no terminal
 
-vasfvafsv
+Lorem
 
 ```python
 import os
