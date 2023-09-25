@@ -1,0 +1,159 @@
+---
+layout: post
+modulo: 4. Análise de Dados com Python
+title: Biblioteca para Conjunto de Dados (numpy)
+description: Em breve
+order: 4.1
+---
+
+## Manipulação de conjunto de dados
+
+Ler dados de arrays
+
+```python
+primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
+
+print(primos) # Tudo
+print(primos[0]) # Primeiro
+print(primos[3]) # Quarto
+print(primos[7]) # Oitavo - Último
+print(primos[0:2]) # Primeiro, Segundo, Terceiro
+print(primos[1:4]) # Segundo, Terceiro, Quarto, Quinto
+print(primos[-1]) # Último
+print(primos[-2]) # Penúltimo
+```
+
+Alteração de dados de array e matrizes
+
+```python
+primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
+primos[3] = 9
+print(primos)
+```
+
+Visualizar dados da array por condição, exemplos para os todos maiores de 3
+
+```python
+primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
+print(primos[primos > 3])
+```
+
+Visualizar Terceira linha e Terceira coluna
+
+```python
+primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
+print(primos[2, 2])
+```
+
+Quarta linha
+
+```python
+primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
+print(primos[3, ])
+```
+
+Quarta linha e Quarta a sétima coluna
+
+```python
+primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
+print(primos[3, 3:6])
+```
+
+Alterar matriz em lote
+
+```python
+primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
+
+primos[primos >= 20] = 90
+
+print(primos)
+```
+
+## Importação de biblioteca
+
+Importação de uma biblioteca com um apelido
+
+```python
+import numpy as np
+```
+
+## Criação de Lista e Array
+
+Iniciando direto
+
+```python
+import numpy as np
+
+lista = [1, 2, 3, 4, 5, 6, 7, 8]
+array = np.array(lista)
+
+print("lista", lista)
+print("tipo lista", type(lista))
+print()
+print("array", array)
+print("tipo array", type(array))
+```
+
+Criando um array por uma lista
+
+```python
+import numpy as np
+
+lista = [6, 7, 8, 9, 10]
+array_lista = np.array(lista)
+
+print("array_lista", array_lista)
+```
+
+Criando um array por uma lista
+
+```python
+import numpy as np
+
+lista = [6, 7, 8, 9, 10, 2, 4]
+array_lista = np.array(lista)
+
+print("max", array_lista.max())
+```
+
+## Criação de um Array multi dimensional
+
+Criação de matriz
+
+```python
+import numpy as np
+
+array_multi = np.array([[1, 3, 5, 7], [2, 4, 6, 8]])
+print(array_multi)
+print(array_multi.shape)
+```
+
+Remodelar uma matriz
+
+```python
+import numpy as np
+
+reshape = array_multi.reshape(4, 2)
+print(reshape)
+```
+
+Criação de uma matriz com numeração em sequência
+
+```python
+import numpy as np
+
+array_create = np.arange(36)
+print(array_create)
+
+array_create.resize((6, 6))
+print(array_create)
+```
+
+```python
+import numpy as np
+
+lista = [6, 7, 8, 9, 10, 2]
+array_lista = np.resize((3, 2))
+
+print("max", array_lista.max(axis=1))
+```

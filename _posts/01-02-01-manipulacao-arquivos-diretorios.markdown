@@ -6,6 +6,16 @@ description: Interagir com o sistema operacional objetivando manipulação de ar
 order: 2.1
 ---
 
+## Problemas de padrão de endereços
+
+Sistemas operacionais diferente para endereçamento por exemplo para o **Windows**: `\caminho\para\arquivo` e no temos o padrão **Linux**: `/caminho/para/arquivo` para funcionar em vários cenários trabalhar com o `path.join` adaptando para todos os sistemas
+
+```python
+import os
+
+caminho = os.path.join('caminho', 'para', 'arquivo')
+```
+
 ## Listagem de arquivos em pasta
 
 Ler a listagem dos arquivos disponíveis de uma determinado local, indicado `.` capturamos os arquivos disponíveis no local da execução
@@ -42,12 +52,12 @@ linhas = arquivo.readlines()
 for linha in linhas:
     print(linha)
 
-arquivo.close()    
+arquivo.close()
 ```
 
 ## Escrever arquivo completo
 
-Podemos criar um arquivo completo, abrindo um arquivo não existente para criá-lo ou sobrescrever um arquivo existente, informando o modo de escrita com "w" (_write_)
+Podemos criar um arquivo completo, abrindo um arquivo não existente para criá-lo ou sobrescrever um arquivo existente, informando o modo de escrita com "w" (_write_), destaque para o `\n` para pular de linha
 
 ```python
 arquivo = open("facilitada.txt", "w")
@@ -57,7 +67,7 @@ arquivo.write("lá?\nah!\nsabiá…\npapá…\nmaná…\nsofá…\nsinhá…\nc�
 arquivo.close()
 ```
 
-O modo "x" para garantir que a criação de um arquivo, se o arquivo existir vai retornar um erro
+O modo "x" (_exclusive creation_) para garantir que a criação de um arquivo, se o arquivo existir vai retornar um erro
 
 ## Escrever arquivo linha por linha
 
@@ -87,7 +97,7 @@ arquivo.close()
 
 ## Renomear arquivos
 
-aavsfvfdsv
+Usar a biblioteca de `os` para renomear um arquivo, também pode ser usando para mover um arquivo
 
 ```python
 import os
@@ -107,10 +117,34 @@ os.replace("./simplificada.txt", "./facilitada.txt")
 
 ## Remover arquivo
 
-csfvadsbxgb
+Remover arquivos com a função `remove` basta informar o caminho para o arquivo 
 
 ```python
 import os
 
 os.remove("facilitada.txt")
 ```
+
+## Criar diretórios
+
+vafvabgd
+
+```python
+import os
+
+os.mkdir("./teste")
+```
+
+## Executar comandos no terminal
+
+vasfvafsv
+
+```python
+import os
+
+os.system("echo test")
+```
+
+## Quero mais
+
+Para quem quer se aprofundar no assunto recomendo o livro [Automatize tarefas maçantes com Python: Programação prática para verdadeiros iniciantes](https://amzn.to/48jPESW)

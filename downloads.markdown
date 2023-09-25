@@ -7,7 +7,7 @@ Listagem de arquivos exemplos usados
 
 ## [Poema Python]({{ site.baseurl }}/assets/content/poem.py)
 
-Arquivo Python para apresentação de um pequeno poema com filosofia Python
+Arquivo Python para apresentação de um pequeno poema com a filosofia Python
 
 ## [Canção do Exílio]({{ site.baseurl }}/assets/content/cancao_do_exilio.txt)
 

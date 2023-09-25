@@ -113,4 +113,6 @@ html = resposta.read()
 print(html)
 ```
 
-Lembrando que esses são um pequeno exemplo a listagem completa pode ser encontrada em: [Python Library](https://docs.python.org/3/library/index.html)
+## Quero mais
+
+Lembrando que esses são um pequeno exemplo a listagem completa pode ser encontrada na biblioteca Python em [funções](https://docs.python.org/3/library/functions.html) e [módulos](https://docs.python.org/3/library/index.html)

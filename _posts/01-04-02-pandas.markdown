@@ -1,7 +1,7 @@
 ---
 layout: post
 modulo: 4. Análise de Dados com Python
-title: Limpeza e Transformação de Dados
+title: Biblioteca de Análise de Dados (pandas)
 description: Em breve
 order: 4.2
 ---
