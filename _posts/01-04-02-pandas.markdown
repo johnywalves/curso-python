@@ -2,9 +2,17 @@
 layout: post
 modulo: 4. Análise de Dados com Python
 title: Biblioteca de Análise de Dados (pandas)
-description: A biblioteca Pandas é uma das bibliotecas mais populares em Python para manipulação e análise de dados. Ela fornece estruturas de dados flexíveis e eficientes para trabalhar com dados tabulares, como planilhas, tabelas de banco de dados e conjuntos de dados em geral
+description: Pandas é uma das bibliotecas mais populares em Python para manipulação e análise de dados. Ela fornece estruturas de dados flexíveis e eficientes para trabalhar com dados tabulares, como planilhas, tabelas de banco de dados e conjuntos de dados em geral
 order: 4.2
 ---
+
+## Instalação do pacote
+
+Instalar o pacote `pandas` no pelo pip
+
+```bash
+pip install pandas
+```
 
 ## Importação de biblioteca
 

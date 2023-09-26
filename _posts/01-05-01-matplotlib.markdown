@@ -2,7 +2,7 @@
 layout: post
 modulo: 5. Visualização de Dados com Python
 title: Introdução à Biblioteca de Visualização (matplotlib e seaborn)
-description: biblioteca Matplotlib é uma das bibliotecas mais populares em Python para criação de gráficos e visualizações de dados. Ela fornece uma ampla variedade de recursos para criar gráficos estáticos, interativos e personalizáveis, o que a torna uma ferramenta essencial para qualquer pessoa que trabalhe com análise de dados, cientistas de dados, pesquisadores, engenheiros e profissionais de visualização de dados
+description: Matplotlib é uma das bibliotecas mais populares em Python para criação de gráficos e visualizações de dados. Ela fornece uma ampla variedade de recursos para criar gráficos estáticos, interativos e personalizáveis, o que a torna uma ferramenta essencial para qualquer pessoa que trabalhe com análise de dados, cientistas de dados, pesquisadores, engenheiros e profissionais de visualização de dados
 order: 5.1
 ---
 

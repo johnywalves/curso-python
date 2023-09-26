@@ -18,6 +18,7 @@
         "ylabel",
         "savefig",
         "fontsize",
-        "pyplot"
+        "pyplot",
+        "firefox"
     ]
 }

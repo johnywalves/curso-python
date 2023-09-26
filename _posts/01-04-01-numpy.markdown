@@ -2,9 +2,17 @@
 layout: post
 modulo: 4. Análise de Dados com Python
 title: Biblioteca para Conjunto de Dados (numpy)
-description: A biblioteca NumPy (Numerical Python) é uma biblioteca fundamental para computação científica em Python. Ela fornece suporte para a manipulação eficiente de arrays multidimensionais e funções matemáticas de alto desempenho para realizar operações em dados numéricos
+description: NumPy (Numerical Python) é uma biblioteca fundamental para computação científica em Python. Ela fornece suporte para a manipulação eficiente de arrays multidimensionais e funções matemáticas de alto desempenho para realizar operações em dados numéricos
 order: 4.1
 ---
+
+## Instalação do pacote
+
+Instalar o pacote `numpy` no pelo pip
+
+```bash
+pip install numpy
+```
 
 ## Importação de biblioteca
 

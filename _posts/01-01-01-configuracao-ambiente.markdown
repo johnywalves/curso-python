@@ -33,7 +33,7 @@ pip --version
 Vamos usar o gerenciador de pacotes para instalar as bibliotecas necessárias para automação de processos e análise de dados, como pandas, matplotlib, numpy, seaborn, entre outras. Por exemplo:
 
 ```bash
-pip install pandas matplotlib numpy seaborn
+pip install selenium webdriver-manager pandas matplotlib numpy seaborn
 ```
 
 ## Executar módulos em Python
