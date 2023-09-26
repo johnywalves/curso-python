@@ -98,7 +98,7 @@ searchField.send_keys(Keys.ENTER)
 Localizando o link para as imagens pelo seletor de CSS
 
 ```python
-imageTab = driver.find_element(By.CSS_SELECTOR, "#top_nav a")
+imageTab = driver.find_element(By.CSS_SELECTOR, "div[data-id=trc] a:nth-child(1)")
 imageTab.click()
 ```
 
@@ -153,7 +153,7 @@ def main():
   driver.save_screenshot("search.png")
 
   # Clicar para a aba de Imagens
-  imageTab = driver.find_element(By.CSS_SELECTOR, "#top_nav a")
+  imageTab = driver.find_element(By.CSS_SELECTOR, "div[data-id=trc] a:nth-child(1)")
   imageTab.click()
   # Tirar um screenshot das imagens
   driver.save_screenshot("imagens.png")
