@@ -150,7 +150,7 @@ Existem várias IDEs para desenvolvimento em Python como [Jupyter Notebook](http
 
 Recomendo o [Visual Studio Code](https://code.visualstudio.com/) (VSCode) para executar o ambiente desenvolvimento localmente facilitado pelo plugin [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), desta maneira ao abrir um arquivo Python no VSCode temos o botão de executar e o resultado já apresentado no terminal
 
-![VSCode com botão de executar](/assets/figs/vscode.jpg)
+![VSCode com botão de executar](/assets/img/vscode.jpg)
 
 ## Ambiente Virtual (Opcional, mas Recomendado)
 

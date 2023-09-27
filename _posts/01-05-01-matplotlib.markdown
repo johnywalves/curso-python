@@ -15,7 +15,9 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
 ```
 
-Colunas
+## Gráficos de colunas
+
+Colunas vertical
 
 ```python
 import pandas as pd
@@ -154,3 +156,37 @@ plt.savefig('./notas_por_frutas_horizontal.jpg')
 ```
 
 ![Lorem](/assets/figs/notas_por_frutas_horizontal.jpg)
+
+## Gráfico de setores
+
+Lorem
+
+```python
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+frutas = 'Banana', 'Maçã', 'Goiaba', 'Maracujá', 'Pera'
+qtds = [2, 3, 7, 10, 4]
+
+plt.pie(qtds, labels=frutas)
+plt.savefig('./quantidade_frutas_pie.jpg')
+```
+
+![Lorem](/assets/figs/quantidade_frutas_pie.jpg)
+
+## Carregando base de dados
+
+[IMDB Video Games Dataset](https://www.kaggle.com/datasets/lorentzyeung/imdb-video-games-dataset)
+
+
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+dados = pd.read_csv('imdb_video_games.zip', compression = 'zip')
+
+sns.scatterplot(x='Runtime', y = 'Stars', data=dados)
+plt.savefig('./video_game_scatterplot.jpg')
+```

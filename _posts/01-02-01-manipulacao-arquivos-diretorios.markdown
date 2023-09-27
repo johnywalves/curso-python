@@ -8,12 +8,40 @@ order: 2.1
 
 ## Problemas de padrão de endereços
 
-Sistemas operacionais diferente para endereçamento por exemplo para o **Windows**: `\caminho\para\arquivo` e no temos o padrão **Linux**: `/caminho/para/arquivo` para funcionar em vários cenários trabalhar com o `path.join` adaptando para todos os sistemas
+Sistemas operacionais diferente para endereçamento por exemplo para o **Windows**: `\caminho\para\arquivo` e no temos o padrão **Linux** e **Mac**: `/caminho/para/arquivo` para ilustrar
+
+![Lorem](/assets/img/sep_path.jpg)
+
+Para funcionar em vários cenários podemos trabalhar com o `path.join` adaptando para todos os sistemas
 
 ```python
 import os
 
 caminho = os.path.join('caminho', 'para', 'arquivo')
+print(caminho)
+```
+
+Podemos pegar a informação do separador para usos futuros
+
+```python
+import os
+
+print('separador do sistema', os.path.sep)
+```
+
+## Conhecendo e mudando o local de trabalho
+
+Todo programa executa em uma pasta de trabalho, conhecer essa pasta facilita o acesso a outros recursos
+
+```python
+import os
+
+print('você está aqui', os.getcwd())
+
+destino = os.path.join('.', 'assets', 'content')
+os.chdir(destino)
+
+print('agora está aqui', os.getcwd())
 ```
 
 ## Listagem de arquivos em pasta
@@ -117,7 +145,7 @@ os.replace("./simplificada.txt", "./facilitada.txt")
 
 ## Remover arquivo
 
-Remover arquivos com a função `remove` basta informar o caminho para o arquivo 
+Remover arquivos com a função `remove` basta informar o caminho para o arquivo
 
 ```python
 import os
@@ -127,7 +155,7 @@ os.remove("facilitada.txt")
 
 ## Criar diretórios
 
-Basta informar o caminho desejado para 
+Basta informar o caminho desejado para
 
 ```python
 import os
