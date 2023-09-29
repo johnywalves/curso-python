@@ -6,7 +6,9 @@ description: Coleção de dados associada a uma variável como eles podem ser cr
 order: 3.1
 ---
 
-## Lista
+## Listas
+
+Listas são coleções ordenadas, diferentes tipos e mutáveis
 
 A criação de uma lista é indicada pelo conteúdo de dois colchetes `[]` com os elementos separados por vírgulas
 
@@ -24,7 +26,7 @@ print(a[2])
 print(a[-1])
 ```
 
-Uma lista é um conjunto mutável podemos adicionar elementos
+Uma lista é uma coleção mutável, podemos adicionar elementos
 
 ```python
 a = [1, 3, 5, 7]
@@ -50,6 +52,8 @@ print(a)
 
 ## Tuplas
 
+Tupla são semelhantes a listas, mas imutáveis
+
 Criação de tuplas e pegar informação por uma determinada posição
 
 ```python
@@ -69,7 +73,9 @@ a = (1, 3, 5, 7)
 a[1] = 9
 ```
 
-## Dicionário
+## Dicionários
+
+Dicionários são coleções organizadas de pares chave-valor, com uso de chaves únicas
 
 Podemos criar um objeto com os atributos nomeados
 
@@ -99,4 +105,24 @@ user['idade'] = 37
 print('nome', user['nome'])
 print('email', user['email'])
 print('idade', user['idade'])
+```
+
+## Conjuntos (Set)
+
+Conjuntos são coleções não ordenadas de elementos únicos
+
+A criação de conjuntos é indicada pelo conteúdo de duas chaves `{}` com os elementos separados por vírgulas
+
+```python
+frutas = { "banana", "maça", "pera" }
+
+print(frutas)
+```
+
+Podemos observar que ele ignora os valores repetidos
+
+```python
+frutas = { "banana", "banana", "maça", "banana", "pera" }
+
+print(frutas)
 ```

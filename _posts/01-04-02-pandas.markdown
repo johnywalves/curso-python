@@ -2,7 +2,7 @@
 layout: post
 modulo: 4. Análise de Dados com Python
 title: Biblioteca de Análise de Dados (pandas)
-description: Pandas é uma das bibliotecas mais populares em Python para manipulação e análise de dados. Ela fornece estruturas de dados flexíveis e eficientes para trabalhar com dados tabulares, como planilhas, tabelas de banco de dados e conjuntos de dados em geral
+description: Pandas é uma das bibliotecas mais populares em Python para manipulação e análise de dados. Ela fornece estruturas de dados flexíveis e eficientes para trabalhar com dados tabulares, como planilhas, tabelas de banco de dados e coleção de dados em geral
 order: 4.2
 ---
 
@@ -25,7 +25,6 @@ import pandas as pd
 ## Criação dos DataFrames
 
 Pandas introduz duas principais estruturas de dados: o **DataFrame** e a **Series**. O DataFrame é uma tabela bidimensional com rótulos nas colunas e linhas, semelhante a uma planilha, enquanto a Series é uma estrutura unidimensional semelhante a uma coluna ou linha de um DataFrame
-
 
 Criação de um DataFrame com a classificação de frutas
 
@@ -91,15 +90,13 @@ frutas = pd.merge(frutas_1, frutas_2, how="outer")
 print(frutas)
 ```
 
-Lorem
+Os tipos de mesclagem (_merge_) semelhantes as junções SQL:
 
-Type of merge to be performed.
-
-- left: use only keys from left frame, similar to a SQL left outer join; preserve key order.
-- right: use only keys from right frame, similar to a SQL right outer join; preserve key order.
-- outer: use union of keys from both frames, similar to a SQL full outer join; sort keys lexicographically.
-- inner: use intersection of keys from both frames, similar to a SQL inner join; preserve the order of the left keys.
-- cross: creates the cartesian product from both frames, preserves the order of the left keys.
+- **left**: apenas chaves do quadro esquerdo, preservar a ordem das chaves;
+- **right**: apenas chaves do quadro direito, preservar a ordem das chaves;
+- **outer**: união de chaves de ambos os frames, classificar chaves lexicograficamente;
+- **inner**: interseção de chaves de ambos os quadros, preserve a ordem das teclas esquerdas;
+- **cross**: cria o produto cartesiano de ambos os quadros, preserva a ordem das teclas esquerdas.
 
 Criação de array com Fruta e Origem
 
@@ -196,4 +193,68 @@ frutas = pd.DataFrame([
 ])
 
 print(frutas)
+```
+
+## Compreendendo base de dados
+
+Vamos usar a fonte de dados **Video Game Sales with Ratings** com ({{ site.baseurl }}/assets/content/video_games_sales.zip) encontrada na área de [Downloads](/downloads)
+
+```python
+import pandas as pd
+
+dados = pd.read_csv('video_games_sales.zip', compression = 'zip')
+
+print('Nome das colunas:\n', dados.columns, '\n\n')
+print('5 primeiros registros:\n', dados.head(), '\n\n')
+print('5 últimos registros:\n', dados.tail(), '\n\n')
+print('descrição da fonte:\n', dados.describe(), '\n\n')
+print('formato da fonte:\n', dados.shape)
+```
+
+Compreender um campo especifico
+
+```python
+import pandas as pd
+
+dados = pd.read_csv('video_games_sales.zip', compression = 'zip')
+plataforma = dados['Platform']
+
+print('Campo:\n', plataforma, '\n\n')
+print('Únicos:\n', plataforma.unique(), '\n\n')
+print('Contagem:\n', plataforma.value_counts(), '\n\n')
+print('Proporção:\n', plataforma.value_counts(normalize = True), '\n\n')
+```
+
+## Manipulação de dados
+
+Renomear campos
+
+```python
+import pandas as pd
+
+colunas = {
+    'Name': 'nome',
+    'Platform': 'plataforma',
+    'Year_of_Release': 'ano',
+    'Critic_Count': 'críticos',
+    'User_Count': 'usuários'
+}
+
+dados = pd.read_csv('video_games_sales.zip', compression = 'zip')
+dados.rename(columns=colunas, inplace=True)
+print(dados)
+```
+
+Realizar pesquisa dentro de valores
+
+```python
+import pandas as pd
+
+dados = pd.read_csv('video_games_sales.zip', compression = 'zip')
+
+plataforma = 'GBA'
+print(dados.query('Platform == @plataforma'))
+
+plataformas = ['GB', 'GBA']
+print(dados.query('Platform in @plataformas'))
 ```

@@ -10,7 +10,7 @@ order: 2.1
 
 Sistemas operacionais diferente para endereçamento por exemplo para o **Windows**: `\caminho\para\arquivo` e no temos o padrão **Linux** e **Mac**: `/caminho/para/arquivo` para ilustrar
 
-![Lorem](/assets/img/sep_path.jpg)
+![Luta de sabres de luz](/assets/img/sep_path.jpg)
 
 Para funcionar em vários cenários podemos trabalhar com o `path.join` adaptando para todos os sistemas
 
@@ -99,7 +99,7 @@ O modo "x" (_exclusive creation_) para garantir que a criação de um arquivo, s
 
 ## Escrever arquivo linha por linha
 
-Podemos criar um arquivo adicionado para linha ao iterar o conjunto
+Podemos criar um arquivo adicionado para linha ao iterar a coleção
 
 ```python
 arquivo = open("facilitada.txt", "w")
@@ -165,7 +165,7 @@ os.mkdir("./teste")
 
 ## Executar comandos no terminal
 
-Lorem
+Podemos executar comandos no terminal do sistema operacional
 
 ```python
 import os

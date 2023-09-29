@@ -27,7 +27,7 @@ comprimento = len(texto)
 print(comprimento)
 ```
 
-Ops! O tamanho de uma conjunto de dados também
+Ops! O tamanho de uma coleção de dados também
 
 ```python
 num = [1, 3, 5, 7, 9, 11]

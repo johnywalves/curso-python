@@ -139,10 +139,72 @@ Pegar partes do texto
 
 ```python
 nome = "Leonardo da Vinci"
+
 print(nome[0])
 print(nome[1])
 print(nome[2])
 print(nome[-1])
 print(nome[:3])
 print(nome[3:])
+```
+
+## Tratamento de Erros
+
+Erros podem acontecer
+
+```python
+print("Teste"[15])
+```
+
+Nesse comando ocorre um erro e temos a mensagem `IndexError: string index out of range`, estamos pegando uma parte não existente no string
+
+Podemos lidar com as estimativas de erros ao usar a estrutura `except` para controlar todos os erros no fluxo
+
+```python
+try:
+    print("Teste"[15])
+except:
+    print('Ops! Algum problema')
+```
+
+Para capturar apenas um tipo específico de erro, podemos indicar esse tipo
+
+```python
+try:
+    print("Teste"[15])
+except IndexError as error:
+    print(error)
+```
+
+Como podemos ver somente o tipo informado será capturado
+
+```python
+try:
+    print(15 / 0)
+except IndexError as error:
+    print(error)
+```
+
+E adicionando uma estrutura para lidar com outros tipos de erros
+
+```python
+try:
+    print(15 / 0)
+except IndexError as error:
+    print('Erro de índice', error)
+except:
+    print('Ops! Algum problema')
+```
+
+Para assegurar que possamos sempre executar um comando, como o fechamento de um arquivo, usamos a estrutura de `finally` indicando com o trecho 
+
+```python
+try:
+    print(15 / 0)
+except IndexError as error:
+    print('Erro de índice', error)
+except:
+    print('Ops! Algum problema')
+finally:
+    print('Final')
 ```

@@ -38,11 +38,11 @@ else:
 
 ## Iterações
 
-Repetição de um determinado comportamento por uma condição ou elementos de um conjunto
+Repetição de um determinado comportamento por uma condição ou elementos de uma coleção
 
 ### For: para
 
-O `for` itera os elementos de um conjunto, que pode ser gerada pela função de `range` algo informar a quantidade de vezes desejada
+O `for` itera os elementos de uma coleção, que pode ser gerada pela função de `range` algo informar a quantidade de vezes desejada
 
 ```python
 for x in range(6):

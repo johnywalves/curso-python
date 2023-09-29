@@ -8,3 +8,6 @@ vendor
 # Arquivos criados pelo processo
 teste.py
 facilitada.txt
+dados.csv
+dados.json
+dados.xlsx

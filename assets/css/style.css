@@ -40,6 +40,24 @@ body {
   line-height: 140%;
 }
 
+ul {
+  margin: 0 0 2rem;
+}
+
+li {
+  margin-left: 2.5rem;
+  list-style: none;
+}
+
+li::before {
+  content: "\2022";
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em; 
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -220,7 +238,6 @@ main a:hover {
   text-decoration: underline;
 }
 
-
 p,
 figure {
   margin: 3rem 0 1.5rem;
@@ -230,6 +247,13 @@ img {
   display: block;
   margin: 0 auto;
   border-radius: 0.5rem;
+}
+
+.formula {
+  margin: 3rem auto 1.5rem;
+  text-align: center;
+  font-family: monospace, ui-monospace;
+  font-size: 2rem;
 }
 
 div.highlight {
