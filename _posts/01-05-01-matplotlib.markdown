@@ -2,7 +2,7 @@
 layout: post
 modulo: 5. Visualização de Dados com Python
 title: Introdução à Biblioteca de Visualização (matplotlib e seaborn)
-description: ----------------------------- Matplotlib é uma das bibliotecas mais populares em Python para criação de gráficos e visualizações de dados. Ela fornece uma ampla variedade de recursos para criar gráficos estáticos, interativos e personalizáveis, o que a torna uma ferramenta essencial para qualquer pessoa que trabalhe com análise de dados, cientistas de dados, pesquisadores, engenheiros e profissionais de visualização de dados
+description: Matplotlib é uma das bibliotecas mais populares em Python para criação de gráficos e visualizações de dados. Ela fornece uma ampla variedade de recursos para criar gráficos estáticos, interativos e personalizáveis, o que a torna uma ferramenta essencial para qualquer pessoa que trabalhe com análise de dados, cientistas de dados, pesquisadores, engenheiros e profissionais de visualização de dados
 order: 5.1
 ---
 
@@ -126,7 +126,7 @@ plt.savefig('./notas_por_frutas_ticks.jpg')
 
 ## Gráfico de setores
 
-Lorem
+Setores, pois pizza é comida, com as proporções dos valores
 
 ```python
 import matplotlib.pyplot as plt
@@ -186,9 +186,9 @@ plt.savefig('./charts_pie.jpg')
 
 ![Lorem](/assets/figs/charts_pie.jpg)
 
-## Carregando base de dados
+## Gráfico de dispersão
 
-Vamos usar a fonte de dados **Video Game Sales with Ratings** com ({{ site.baseurl }}/assets/content/video_games_sales.zip) encontrada na área de [Downloads](/downloads)
+Vamos usar os dados para gerar um gráfico dispersão
 
 ```python
 import pandas as pd
@@ -204,4 +204,46 @@ plt.savefig('./charts_scatterplot.jpg')
 
 ![Lorem](/assets/figs/charts_scatterplot.jpg)
 
-Lorem
+## Gráfico de linhas
+
+Evolução de uma série temporal
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+dados = pd.read_csv('video_games_sales.zip', compression = 'zip')
+
+sns.set()
+sns.lineplot(x='Year_of_Release', y='Critic_Score', data=dados)
+plt.savefig('./charts_lineplot.jpg')
+```
+
+![Lorem](/assets/figs/charts_lineplot.jpg)
+
+<!--
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+dados = pd.read_csv('video_games_sales.zip', compression = 'zip')
+notas = dados[['Name', 'Year_of_Release', 'Critic_Score', 'User_Score']]
+
+notas = notas.dropna(axis=0)
+notas = notas.query('User_Score != "tbd"')
+
+notas['Critic_Score'] = notas['Critic_Score'] / 10
+notas['User_Score'] = notas['User_Score'].astype(float)
+
+sns.set()
+sns.lineplot(x='Year_of_Release', y='Critic_Score', data=dados)
+#sns.lineplot(x='Year_of_Release', y='User_Score', data=dados)
+plt.savefig('./charts_lineplot_multi.jpg')
+```
+
+![Lorem](/assets/figs/charts_lineplot_multi.jpg)
+
+-->

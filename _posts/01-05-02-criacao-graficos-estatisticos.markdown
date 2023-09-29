@@ -8,7 +8,7 @@ order: 5.2
 
 ## Dados utilizados
 
-Lorem
+Vamos usar a fonte de dados **Video Game Sales with Ratings** com [somente pontuações]({{ site.baseurl }}/assets/content/video_games_scores.csv) encontrada na área de [Downloads](/downloads)
 
 ```python
 import pandas as pd

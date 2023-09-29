@@ -204,6 +204,7 @@ import pandas as pd
 
 dados = pd.read_csv('video_games_sales.zip', compression = 'zip')
 
+print('Informações:\n', dados.info(), '\n\n')
 print('Nome das colunas:\n', dados.columns, '\n\n')
 print('5 primeiros registros:\n', dados.head(), '\n\n')
 print('5 últimos registros:\n', dados.tail(), '\n\n')
@@ -227,7 +228,7 @@ print('Proporção:\n', plataforma.value_counts(normalize = True), '\n\n')
 
 ## Manipulação de dados
 
-Renomear campos
+Renomear campos, detalhe para o `inplace=True` para converter o DataFrame original
 
 ```python
 import pandas as pd
