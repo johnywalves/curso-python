@@ -1,5 +1,6 @@
 ---
 layout: post
+category: modules
 modulo: 1. Introdução ao Python
 title: Funções e Módulos Básicos
 description: Funções e módulos essenciais em Python para realizar uma variedade de tarefas. Vamos destacar algumas das funções e módulos mais simples e úteis nesta linguagem
@@ -24,6 +25,7 @@ Conhecer o tamanho de uma string
 ```python
 texto = "Python"
 comprimento = len(texto)
+
 print(comprimento)
 ```
 
@@ -32,6 +34,7 @@ Ops! O tamanho de uma coleção de dados também
 ```python
 num = [1, 3, 5, 7, 9, 11]
 comprimento = len(num)
+
 print(comprimento)
 ```
 
@@ -89,6 +92,7 @@ Ao executar podemos informar o parâmetros para a execução, por exemplo o arqu
 import sys
 
 argumentos = sys.argv
+
 print(argumentos)
 ```
 
@@ -108,6 +112,7 @@ Permite fazer requisições HTTP para acessar recursos na web
 import urllib.request
 
 resposta = urllib.request.urlopen('https://usepython.com.br/')
+
 html = resposta.read()
 
 print(html)

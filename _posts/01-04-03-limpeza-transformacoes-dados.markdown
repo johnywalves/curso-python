@@ -1,5 +1,6 @@
 ---
 layout: post
+category: modules
 modulo: 4. Análise de Dados com Python
 title: Limpeza e Transformação de Dados
 description: A limpeza e transformação de dados são processos essenciais na análise de dados, que envolvem a preparação e organização dos dados brutos para que possam ser usados efetivamente em análises e modelagem estatística

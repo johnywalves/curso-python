@@ -1,5 +1,6 @@
 ---
 layout: post
+category: modules
 modulo: 1. Introdução ao Python
 title: Fundamentos da Linguagem Python
 description: Python é uma linguagem de programação de alto nível, interpretada, de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991
@@ -97,13 +98,14 @@ print(soma(2, 3, 5))
 Entender os tipos de básicos de dados para o Python
 
 ```python
-def soma(a, b):
-    return a + b
-
 print(type(5))
 print(type("texto"))
 print(type(1.0))
 print(type(True))
+
+def soma(a, b):
+    return a + b
+
 print(type(soma))
 ```
 

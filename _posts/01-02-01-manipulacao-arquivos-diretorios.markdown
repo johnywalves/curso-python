@@ -1,5 +1,6 @@
 ---
 layout: post
+category: modules
 modulo: 2. Automação de Tarefas com Python
 title: Manipulação de Arquivos e Diretórios
 description: Interagir com o sistema operacional objetivando manipulação de arquivos e diretórios para eventos como ler, criar, mover e excluir
@@ -18,6 +19,7 @@ Para funcionar em vários cenários podemos trabalhar com o `path.join` adaptand
 import os
 
 caminho = os.path.join('caminho', 'para', 'arquivo')
+
 print(caminho)
 ```
 
@@ -39,6 +41,7 @@ import os
 print('você está aqui', os.getcwd())
 
 destino = os.path.join('.', 'assets', 'content')
+
 os.chdir(destino)
 
 print('agora está aqui', os.getcwd())

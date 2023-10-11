@@ -1,5 +1,6 @@
 ---
 layout: post
+category: modules
 modulo: 4. Análise de Dados com Python
 title: Biblioteca para Coleção de Dados (numpy)
 description: NumPy (Numerical Python) é uma biblioteca fundamental para computação científica em Python. Ela fornece suporte para a manipulação eficiente de arrays multidimensionais e funções matemáticas de alto desempenho para realizar operações em dados numéricos
@@ -30,11 +31,12 @@ Iniciando direto
 import numpy as np
 
 lista = [1, 2, 3, 4, 5, 6, 7, 8]
+
+print("tipo lista", type(lista))
+print("lista", lista, "\n")
+
 array = np.array(lista)
 
-print("lista", lista)
-print("tipo lista", type(lista))
-print()
 print("array", array)
 print("tipo array", type(array))
 ```
@@ -44,8 +46,7 @@ Criando um array por uma lista
 ```python
 import numpy as np
 
-lista = [6, 7, 8, 9, 10]
-array_lista = np.array(lista)
+array_lista = np.array([6, 7, 8, 9, 10])
 
 print("array_lista", array_lista)
 ```
@@ -56,6 +57,7 @@ Criando um array por uma lista
 import numpy as np
 
 lista = [6, 7, 8, 9, 10, 2, 4]
+
 array_lista = np.array(lista)
 
 print("max", array_lista.max())
@@ -68,7 +70,9 @@ Ler dados de arrays
 ```python
 import numpy as np
 
-primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37])
+lista_primos = [2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37]
+
+primos = np.array(lista_primos)
 
 print('Tudo', primos)
 print('Primeiro', primos[0])
@@ -85,9 +89,11 @@ Alteração de dados de array e matrizes
 ```python
 import numpy as np
 
-primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37])
+lista_primos = [2, 3, 5, 7, 9, 11]
 
-primos[3] = 9
+primos = np.array(lista_primos)
+
+primos[2] = 9
 
 print(primos)
 ```
@@ -97,12 +103,14 @@ Visualizar dados da array por condição, exemplos para os todos maiores de 3
 ```python
 import numpy as np
 
-primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37])
+lista_primos = [2, 3, 5, 7, 9, 11]
+
+primos = np.array(lista_primos)
 
 filtro = primos > 3
-maiores_tres = primos[filtro]
+print('filtro', filtro, '\n')
 
-print('filtro', filtro)
+maiores_tres = primos[filtro]
 print('maiores_tres', maiores_tres)
 ```
 
@@ -113,10 +121,13 @@ Criação de matriz
 ```python
 import numpy as np
 
-array_multi = np.array([[1, 3, 5, 7], [2, 4, 6, 8]])
+array_multi = np.array([
+        [1, 3, 5, 7], 
+        [2, 4, 6, 8]
+    ])
 
-print(array_multi)
-print(array_multi.shape)
+print('matriz\n', array_multi, '\n')
+print('formato\n', array_multi.shape)
 ```
 
 Remodelar uma matriz
@@ -124,11 +135,14 @@ Remodelar uma matriz
 ```python
 import numpy as np
 
-array_multi = np.array([[1, 3, 5, 7], [2, 4, 6, 8]])
+array_multi = np.array([
+        [1, 3, 5, 7], 
+        [2, 4, 6, 8]
+    ])
 reshape = array_multi.reshape(4, 2)
 
-print(array_multi)
-print(reshape)
+print('original\n', array_multi, '\n')
+print('remodelado\n', reshape)
 ```
 
 Criação de uma matriz com numeração em sequência
@@ -136,11 +150,11 @@ Criação de uma matriz com numeração em sequência
 ```python
 import numpy as np
 
-array_create = np.arange(36)
-print(array_create)
+array_create = np.arange(9)
+print('original\n', array_create, '\n')
 
-array_create.resize((6, 6))
-print(array_create)
+array_create.resize((3, 3))
+print('remodelado\n', array_create, '\n')
 ```
 
 ## Matemática com arrays
@@ -150,8 +164,8 @@ Conta com arrays
 ```python
 import numpy as np
 
-a = np.array([2, 3, 5, 7, 9, 11])
-b = np.array([13, 17, 19, 23, 29, 31])
+a = np.array([2, 4, 6])
+b = np.array([6, 10, 14])
 
 print('soma', a + b)
 print('subtração', b - a)
@@ -164,9 +178,11 @@ Elementos únicos
 ```python
 import numpy as np
 
-lista = np.array([1, 1, 2, 5, 5, 7, 9, 11])
+lista = np.array([1, 1, 2, 5, 5])
 
-print('únicos', np.unique(lista))
+lista_unica =  np.unique(lista)
+
+print('únicos', lista_unica)
 ```
 
 Filtragem completa
@@ -174,11 +190,14 @@ Filtragem completa
 ```python
 import numpy as np
 
-primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37])
+lista_primos = [2, 3, 5, 7, 9, 11, 13, 23, 29, 31, 37]
 
-print('maiores 5', np.where(primos > 7))
-print('menores 30', np.where(primos < 30))
-print('entre 5 e 30', primos[np.logical_and(primos > 7, primos < 30))
+primos = np.array(lista_primos)
+
+print('maiores 5\n', primos[np.where(primos > 7)], '\n')
+print('menores 30\n', primos[np.where(primos < 30)], '\n')
+print('entre 5 e 30\n', primos[np.where((primos > 7) & (primos < 30))], '\n')
+print('além 5 e 30\n', primos[np.where((primos < 7) | (primos > 30))], '\n')
 ```
 
 Remover zeros
@@ -186,7 +205,7 @@ Remover zeros
 ```python
 import numpy as np
 
-lista = np.array([2, 3, 5, 7, 9, 0, 13, 0, 19, 0])
+lista = np.array([2, 3, 0, 13, 0, 19, 0])
 
 print(lista[lista.nonzero()])
 ```
@@ -198,22 +217,23 @@ Cálculos simples com matrizes
 ```python
 import numpy as np
 
-lista = np.array([19, 2, 3, 17, 5, 7, 9, 11, 13])
-lista.resize((3, 3))
+lista = np.array([1, 2, 3, 4])
+print("original\n", lista, "\n")
 
-print(lista)
+lista.resize((2, 2))
+print("modelado\n", lista, "\n")
 
-print("max em colunas", lista.max(axis=0))
-print("max em linhas", lista.max(axis=1))
+print("max em colunas\n", lista.max(axis=0), "\n")
+print("max em linhas\n", lista.max(axis=1), "\n")
 
-print("média em colunas", lista.mean(axis=0))
-print("média em linhas", lista.mean(axis=1))
+print("média em colunas\n", lista.mean(axis=0), "\n")
+print("média em linhas\n", lista.mean(axis=1), "\n")
 
-print("min em colunas", lista.min(axis=0))
-print("min em linhas", lista.min(axis=1))
+print("min em colunas\n", lista.min(axis=0), "\n")
+print("min em linhas\n", lista.min(axis=1), "\n")
 
-print("soma em colunas", lista.sum(axis=0))
-print("soma em linhas", lista.sum(axis=1))
+print("soma em colunas\n", lista.sum(axis=0), "\n")
+print("soma em linhas\n", lista.sum(axis=1), "\n")
 ```
 
 ## Manipulação com array multi-dimensional
@@ -223,11 +243,11 @@ Visualizar **terceira** linha e **terceira** coluna
 ```python
 import numpy as np
 
-primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31])
-primos.resize((4, 3))
+primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19])
+primos.resize((3, 3))
 
-print('matriz', primos)
-print('elemento', primos[2, 2])
+print('matriz\n', primos, '\n')
+print('elemento\n', primos[2, 2], '\n')
 ```
 
 **quarta** linha

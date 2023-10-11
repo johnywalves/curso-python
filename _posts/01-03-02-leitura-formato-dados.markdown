@@ -1,5 +1,6 @@
 ---
 layout: post
+category: modules
 modulo: 3. Manipulação de Dados com Python
 title: Leitura e Escrita de Dados em Formatos Comuns (CSV, JSON, etc.)
 description: A leitura e escrita de dados em formatos comuns, como CSV e JSON, em Python é uma habilidade fundamental quando se trabalha com manipulação e análise de dados

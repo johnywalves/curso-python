@@ -1,5 +1,6 @@
 ---
 layout: post
+category: modules
 modulo: 2. Automação de Tarefas com Python
 title: Introdução à Automação Web (usando Selenium)
 description: Realizar tarefas repetitivas é uma perda de tempo, mas felizmente, temos robôs à disposição para simplificar essas tarefas. Para automatizar interações na web, podemos contar com o Selenium, em conjunto com Python

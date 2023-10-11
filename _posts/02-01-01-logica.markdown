@@ -1,10 +1,10 @@
 ---
 layout: post
-category: modules
-modulo: 5. Visualização de Dados com Python
-title: Criação de Gráficos Estatísticos
+category: basics
+modulo: 1. Organização de pensamento
+title: Lógica
 description: Existem diversos tipos de gráficos estatísticos, cada um adequado para representar diferentes tipos de dados e padrões
-order: 5.2
+order: 1.1
 ---
 
 ## Dados utilizados

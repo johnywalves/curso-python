@@ -1,6 +1,6 @@
 {% include head.html %}
 
-{% assign modulos = site.posts | where: "category", "modules" | group_by: "modulo" | sort: "name" %}
+{% assign modulos = site.posts | where: "category", "basics" | group_by: "modulo" | sort: "name" %}
 
 <body>
     {% include header.html %}

@@ -1,5 +1,6 @@
 ---
 layout: post
+category: modules
 modulo: 1. Introdução ao Python
 title: Configuração do Ambiente Python
 description: Configurar um ambiente Python, verificar a instalação e familiarizar-se com o funcionamento do terminal Python são os primeiros passos para que possamos explorar e experimentar livremente

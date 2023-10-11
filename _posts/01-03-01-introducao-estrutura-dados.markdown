@@ -1,5 +1,6 @@
 ---
 layout: post
+category: modules
 modulo: 3. Manipulação de Dados com Python
 title: Introdução às Estruturas de Dados em Python (listas, dicionários, etc.)
 description: Coleção de dados associada a uma variável como eles podem ser criados e manipulados

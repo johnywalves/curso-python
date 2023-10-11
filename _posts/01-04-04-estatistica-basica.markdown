@@ -1,5 +1,6 @@
 ---
 layout: post
+category: modules
 modulo: 4. Análise de Dados com Python
 title: Análise Estatística Básica
 description: Análise estatística básica em Python envolve a aplicação de técnicas estatísticas fundamentais para descrever, resumir e compreender conjuntos de dados. Python oferece uma ampla variedade de bibliotecas e ferramentas para realizar análises estatísticas básicas
