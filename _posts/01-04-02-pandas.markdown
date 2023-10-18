@@ -60,6 +60,8 @@ print(frutas)
 Criação de um novo DataFrames com o campo comestível incluso
 
 ```python
+import pandas as pd
+
 frutas = pd.DataFrame([
     {"Nome": "Maracujá", "Cor": "Amarela", "CascaComestivel": False, "Nota": 9, "Comestível": True },
     {"Nome": "Pera", "Cor": "Verde", "CascaComestivel": True, "Nota": 4, "Comestível": True }

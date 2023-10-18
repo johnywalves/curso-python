@@ -274,17 +274,19 @@ print('matriz', primos)
 print('elemento', primos[3, 1:2])
 ```
 
-Alterar matriz em lote
+Alterar matriz em lote, por condição
 
 ```python
 import numpy as np
 
 primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31])
+print('primos\n', primos, '\n')
+
 primos.resize((4, 3))
+print('remodelado\n', primos, '\n')
 
 primos[primos >= 20] = 90
-
-print(primos)
+print('transformado\n', primos)
 ```
 
 ## Conversão de tipos
@@ -294,9 +296,9 @@ Conversão da listagem inteira para um tipo
 ```python
 import numpy as np
 
-primos = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37])
-primos_float = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37], float)
-primos_str = np.array([2, 3, 5, 7, 9, 11, 13, 17, 19, 23, 29, 31, 37], str)
+primos = np.array([2, 3, 5, 7, 9, 11, 13])
+primos_float = np.array([2, 3, 5, 7, 9, 11, 13], float)
+primos_str = np.array([2, 3, 5, 7, 9, 11, 13], str)
 
 print('int', primos)
 print('float', primos_float)

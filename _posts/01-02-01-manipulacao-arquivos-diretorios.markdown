@@ -178,4 +178,4 @@ os.system("echo test")
 
 ## Quero mais
 
-Para quem quer se aprofundar no assunto recomendo o livro [Automatize tarefas maçantes com Python: Programação prática para verdadeiros iniciantes](https://amzn.to/48jPESW)
+Para quem quer se aprofundar no assunto recomendo o livro [Automatize tarefas maçantes com Python: Programação prática para verdadeiros iniciantes](https://novatec.com.br/livros/automatize-tarefas-macantes-com-python/)

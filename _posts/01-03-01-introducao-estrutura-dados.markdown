@@ -15,6 +15,7 @@ A criação de uma lista é indicada pelo conteúdo de dois colchetes `[]` com o
 
 ```python
 a = [1, 3, 5, 7]
+
 print(type(a))
 print(a)
 ```
@@ -22,6 +23,8 @@ print(a)
 Para acessar os dados dentro da lista, é necessário indicar o número do índice, começando a contagem a partir do 0 (zero)
 
 ```python
+a = [1, 3, 5, 7]
+
 print(a[0])
 print(a[2])
 print(a[-1])
@@ -31,7 +34,9 @@ Uma lista é uma coleção mutável, podemos adicionar elementos
 
 ```python
 a = [1, 3, 5, 7]
+
 a.append(10)
+
 print(a)
 ```
 
@@ -39,7 +44,9 @@ Mudar um elemento pelo índice
 
 ```python
 a = [1, 3, 5, 7]
+
 a[1] = 15
+
 print(a)
 ```
 
