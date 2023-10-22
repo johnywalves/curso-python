@@ -75,23 +75,43 @@ searchField = WebDriverWait(driver, 10).until(
 )
 ```
 
-### Redimensionar janela do navegador
-
-```python
-driver.set_window_size(1800, 1200)
-```
-
 ### Tirando uma foto
 
 ```python
 driver.save_screenshot("open.png")
 ```
 
+### Redimensionar janela do navegador
+
+```python
+driver.set_window_size(1800, 1200)
+```
+
+Tirar um screenshot da tela ampliada
+
+```python
+driver.save_screenshot("max.png")
+```
+
 ### Digitando texto na caixa
+
+Digitar a palavra "orange" na caixa de busca e digitar `<Enter>`
 
 ```python
 searchField.send_keys("orange")
 searchField.send_keys(Keys.ENTER)
+```
+
+Esperar por 10 segundos
+
+```python
+time.sleep(10)
+```
+
+Tirar um screenshot do resultado da busca
+
+```python
+driver.save_screenshot("search.png")
 ```
 
 ### Clicando no elemento
@@ -99,8 +119,14 @@ searchField.send_keys(Keys.ENTER)
 Localizando o link para as imagens pelo seletor de CSS
 
 ```python
-imageTab = driver.find_element(By.CSS_SELECTOR, "div[data-id=trc] a:nth-child(1)")
+imageTab = driver.find_element(By.CSS_SELECTOR, "#top_nav a")
 imageTab.click()
+```
+
+Tirar um screenshot das imagens
+
+```python
+driver.save_screenshot("imagens.png")
 ```
 
 ## Compilado
@@ -114,12 +140,12 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 
 # Main
 def main():
@@ -154,7 +180,7 @@ def main():
   driver.save_screenshot("search.png")
 
   # Clicar para a aba de Imagens
-  imageTab = driver.find_element(By.CSS_SELECTOR, "div[data-id=trc] a:nth-child(1)")
+  imageTab = driver.find_element(By.CSS_SELECTOR, "#top_nav a")
   imageTab.click()
   # Tirar um screenshot das imagens
   driver.save_screenshot("imagens.png")
